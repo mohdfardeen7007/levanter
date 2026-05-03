@@ -37,13 +37,20 @@ module.exports = {
       })
       : new Sequelize(DATABASE_URL, {
         dialect: 'postgres',
-        ssl: true,
         protocol: 'postgres',
         dialectOptions: {
-          native: true,
           ssl: { require: true, rejectUnauthorized: false },
+          keepAlive: true,
         },
         logging: false,
+        retry: { max: 10 },
+        pool: {
+          max: 5,
+          min: 0,
+          acquire: 30000,
+          idle: 10000,
+          evict: 10000,
+        },
       }),
   PREFIX: (process.env.PREFIX || '^[.,!]').trim(),
   SUDO: process.env.SUDO || '',

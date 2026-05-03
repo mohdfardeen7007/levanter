@@ -87,37 +87,34 @@ bot(
     }
     const groupJid = parsedJid(match)
     if (groupJid.length === 0) {
+      if (!message.isGroup) {
+        return await message.send('Use this in a group, or pass a group JID: `.gstatus <jid>`')
+      }
       const participants = await message.groupMetadata(message.jid)
+      if (!participants) {
+        return await message.send('Could not fetch group metadata.')
+      }
       const isImAdmin = await isAdmin(participants, message.participant)
       if (!isImAdmin) {
         return await message.send('You are not admin')
       }
       await message.groupStatus(message, message.jid)
-      return await message.send('Group status updated.')
     } else {
-      let successCount = 0
       for (const jid of groupJid) {
         if (!isGroup(jid)) continue
-        try {
-          const participants = await message.groupMetadata(jid)
-          const isImAdmin = await isAdmin(participants, message.participant)
-          if (!isImAdmin) {
-            await message.send(`You are not admin at @${jid}`, {
-              contextInfo: { mentionedJid: [message.participant] },
-            })
-            continue
-          }
-          await message.groupStatus(message, jid)
-          successCount++
-        } catch (e) {
-          await message.send(`Failed to update status at @${jid}`, {
-            contextInfo: { mentionedJid: [jid] },
-          })
+        const participants = await message.groupMetadata(jid)
+        if (!participants) {
+          await message.send(`Could not fetch group metadata for @${jid}`, { contextInfo: { mentionedJid: [jid] } })
+          continue
         }
-      }
-      if (successCount > 0) {
-        return await message.send(`Group status updated for ${successCount} group(s).`)
+        const isImAdmin = await isAdmin(participants, message.participant)
+        if (!isImAdmin) {
+          await message.send(`You are not admin at @${jid}`, { contextInfo: { mentionedJid: [jid] } })
+          continue
+        }
+        await message.groupStatus(message, jid)
       }
     }
+    return await message.send('Group status updated.')
   }
 )

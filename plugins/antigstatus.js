@@ -14,8 +14,17 @@ bot(
     type: 'group',
   },
   async (message, match) => {
+    const statusLine = async () => {
+      const cur = await getAntiGstatus()
+      return {
+        jids: cur.jids,
+        line: lang.plugins.antigstatus.status.format(cur.enabled ? 'on' : 'off', cur.jids.length),
+      }
+    }
+
     if (!match) {
-      return await message.send(lang.plugins.antigstatus.usage)
+      const { line } = await statusLine()
+      return await message.send(`${line}\n\n${lang.plugins.antigstatus.usage}`)
     }
 
     const cmd = match.split(' ')[0].toLowerCase()
@@ -28,23 +37,25 @@ bot(
     }
 
     if (cmd === 'ignore') {
-      if (!args) return await message.send(lang.plugins.antigstatus.ignore_prompt)
-      await addAntiGstatusFilter(args)
+      const target = args || (message.isGroup ? message.jid : '')
+      if (!target) return await message.send(lang.plugins.antigstatus.ignore_prompt)
+      await addAntiGstatusFilter(target)
       return await message.send(lang.plugins.antigstatus.filter)
     }
 
     if (cmd === 'unignore') {
-      if (!args) return await message.send(lang.plugins.antigstatus.unignore_prompt)
-      await removeAntiGstatusFilter(args)
+      const target = args || (message.isGroup ? message.jid : '')
+      if (!target) return await message.send(lang.plugins.antigstatus.unignore_prompt)
+      await removeAntiGstatusFilter(target)
       return await message.send(lang.plugins.antigstatus.removed)
     }
 
     if (cmd === 'list') {
-      const cur = await getAntiGstatus()
-      const jids = (cur.filter || '').split(',').map((j) => j.trim()).filter(Boolean)
-      if (jids.length === 0) return await message.send(lang.plugins.antigstatus.list_empty)
+      const { jids, line } = await statusLine()
+      if (jids.length === 0) return await message.send(`${line}\n\n${lang.plugins.antigstatus.list_empty}`)
       return await message.send(
-        lang.plugins.antigstatus.list_header + '\n' + jids.map((j, i) => `${i + 1}. ${j}`).join('\n')
+        `${line}\n\n${lang.plugins.antigstatus.list_header}\n` +
+          jids.map((j, i) => `${i + 1}. ${j}`).join('\n')
       )
     }
 
@@ -53,6 +64,7 @@ bot(
       return await message.send(lang.plugins.antigstatus.cleared)
     }
 
-    return await message.send(lang.plugins.antigstatus.usage)
+    const { line } = await statusLine()
+    return await message.send(`${line}\n\n${lang.plugins.antigstatus.usage}`)
   }
 )
