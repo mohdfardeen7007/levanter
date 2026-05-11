@@ -895,6 +895,7 @@
       "enabled": "Anti group status on aayi.",
       "disabled": "Anti group status off aayi.",
       "desc": "Anti group status settings manage cheyyaan 🛡️",
+      "status": "*Anti group status:* `{0}`\n*Skip cheytha groups:* `{1}`",
       "ignore_prompt": "*Boss, ignore cheyyaanulla oru JID kodukku.* 🕵️‍♂️",
       "unignore_prompt": "*Boss, unignore cheyyaanulla oru JID kodukku.* 🕵️‍♂️",
       "removed": "JID skip list-il ninnu maatti. 🗑️",

@@ -884,6 +884,7 @@
       "enabled": "L'anti statut de groupe a été activé.",
       "disabled": "L'anti statut de groupe a été désactivé.",
       "desc": "Gérer les paramètres anti-statut de groupe 🛡️",
+      "status": "*Anti statut de groupe :* `{0}`\n*Groupes ignorés :* `{1}`",
       "ignore_prompt": "*Boss, fournis un JID à ignorer.* 🕵️‍♂️",
       "unignore_prompt": "*Boss, fournis un JID à retirer de la liste.* 🕵️‍♂️",
       "removed": "JIDs retirés de la liste des ignorés. 🗑️",

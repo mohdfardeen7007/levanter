@@ -895,6 +895,7 @@
       "enabled": "Anti-status grup telah diaktifkan.",
       "disabled": "Anti-status grup telah dinonaktifkan.",
       "desc": "Kelola pengaturan anti status grup 🛡️",
+      "status": "*Anti status grup:* `{0}`\n*Grup yang diabaikan:* `{1}`",
       "ignore_prompt": "*Bos, berikan JID untuk diabaikan.* 🕵️‍♂️",
       "unignore_prompt": "*Bos, berikan JID untuk dihapus dari daftar.* 🕵️‍♂️",
       "removed": "JID dihapus dari daftar abaikan. 🗑️",

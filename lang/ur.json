@@ -895,6 +895,7 @@
       "enabled": "Group status protection enable kar diya gaya hai.",
       "disabled": "Group status protection disable kar diya gaya hai.",
       "desc": "Anti group status settings manage karein 🛡️",
+      "status": "*Group status protection:* `{0}`\n*Ignored groups:* `{1}`",
       "ignore_prompt": "*Boss, ignore karne ke liye ek JID dein.* 🕵️‍♂️",
       "unignore_prompt": "*Boss, unignore karne ke liye ek JID dein.* 🕵️‍♂️",
       "removed": "JIDs ignore list se nikaal diye gaye. 🗑️",

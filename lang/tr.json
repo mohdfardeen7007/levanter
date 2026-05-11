@@ -895,6 +895,7 @@
       "enabled": "Grup durum koruması etkinleştirildi.",
       "disabled": "Grup durum koruması devre dışı bırakıldı.",
       "desc": "Anti grup durum ayarlarını yönet 🛡️",
+      "status": "*Anti grup durumu:* `{0}`\n*Yoksayılan gruplar:* `{1}`",
       "ignore_prompt": "*Patron, yok sayılacak bir JID gir.* 🕵️‍♂️",
       "unignore_prompt": "*Patron, listeden çıkarılacak bir JID gir.* 🕵️‍♂️",
       "removed": "JID'ler yoksayma listesinden çıkarıldı. 🗑️",

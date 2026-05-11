@@ -929,6 +929,7 @@
       "filter": "Filtering JIDs updated, Boss! I've got the list. 📝",
       "enabled": "Anti group status is now active! I'm watching closely. 👀🛡️",
       "disabled": "Anti group status is off. I've stopped monitoring. ❌",
+      "status": "*Anti group status:* `{0}`\n*Ignored groups:* `{1}`",
       "ignore_prompt": "*Boss, please provide a JID to ignore.* 🕵️‍♂️",
       "unignore_prompt": "*Boss, please provide a JID to unignore.* 🕵️‍♂️",
       "removed": "JIDs removed from ignore list, Boss! 🗑️",

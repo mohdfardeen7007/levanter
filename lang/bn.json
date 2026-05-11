@@ -895,6 +895,7 @@
       "enabled": "গ্রুপ স্ট্যাটাস বিরোধী চালু করা হয়েছে।",
       "disabled": "গ্রুপ স্ট্যাটাস বিরোধী বন্ধ করা হয়েছে।",
       "desc": "Anti group status settings ম্যানেজ করুন 🛡️",
+      "status": "*Anti group status:* `{0}`\n*Ignored groups:* `{1}`",
       "ignore_prompt": "*একটি JID দিন যেটা ignore করতে হবে।* 🕵️‍♂️",
       "unignore_prompt": "*একটি JID দিন যেটা unignore করতে হবে।* 🕵️‍♂️",
       "removed": "JID উপেক্ষা তালিকা থেকে সরানো হয়েছে। 🗑️",

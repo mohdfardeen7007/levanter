@@ -895,6 +895,7 @@
       "enabled": "Anti group status enable ho gaya hai.",
       "disabled": "Anti group status disable ho gaya hai.",
       "desc": "Anti group status settings manage karein 🛡️",
+      "status": "*Anti group status:* `{0}`\n*Ignored groups:* `{1}`",
       "ignore_prompt": "*Boss, ignore karne ke liye ek JID dein.* 🕵️‍♂️",
       "unignore_prompt": "*Boss, unignore karne ke liye ek JID dein.* 🕵️‍♂️",
       "removed": "JIDs ignore list se hata diye gaye. 🗑️",

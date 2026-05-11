@@ -895,6 +895,7 @@
       "enabled": "Anti estado de grupo ha sido activado.",
       "disabled": "Anti estado de grupo ha sido desactivado.",
       "desc": "Gestiona los ajustes de anti-estado de grupos 🛡️",
+      "status": "*Anti estado de grupo:* `{0}`\n*Grupos ignorados:* `{1}`",
       "ignore_prompt": "*Jefe, por favor proporciona un JID para ignorar.* 🕵️‍♂️",
       "unignore_prompt": "*Jefe, por favor proporciona un JID para quitar de la lista.* 🕵️‍♂️",
       "removed": "JIDs eliminados de la lista de ignorados. 🗑️",
