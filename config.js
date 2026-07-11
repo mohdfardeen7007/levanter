@@ -7,6 +7,15 @@ if (existsSync(configPath)) require('dotenv').config({ path: configPath })
 const toBool = (x) => x == 'true'
 const DATABASE_URL =
   process.env.DATABASE_URL === undefined ? databasePath : process.env.DATABASE_URL
+const normalizeMode = (raw) => {
+  const m = String(raw || 'false')
+    .trim()
+    .toLowerCase()
+  if (m === 'true' || m === 'both') return 'both'
+  if (m === 'only' || m === 'api') return 'api'
+  return 'bot'
+}
+const MODE = normalizeMode(process.env.API_MODE)
 module.exports = {
   VERSION: require('./package.json').version,
   SESSION_ID: (process.env.SESSION_ID || '').trim(),
@@ -112,4 +121,10 @@ module.exports = {
   YT_COOKIE: process.env.YT_COOKIE,
   GROQ_MODEL: (process.env.GROQ_MODEL || 'llama-3.3-70b-versatile').trim(),
   GROQ_API_KEY: (process.env.GROQ_API_KEY || '').trim(),
+  MODE,
+  API_ENABLED: MODE !== 'bot',
+  BOT_ENABLED: MODE !== 'api',
+  API_KEY: (process.env.API_KEY || '').trim(),
+  API_WEBHOOK_URL: (process.env.API_WEBHOOK_URL || '').trim(),
+  API_PUBLIC_URL: (process.env.API_PUBLIC_URL || '').trim(),
 }
