@@ -31,6 +31,7 @@ Set your preferred language with `BOT_LANG` in `config.env`.
 | `ru` | Russian    |
 | `ar` | Arabic     |
 | `ml` | Malayalam  |
+| `zh` | Chinese    |
 
 ```env
 BOT_LANG=es
