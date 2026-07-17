@@ -1895,6 +1895,11 @@ fetch-blob@^3.1.2, fetch-blob@^3.1.4:
     node-domexception "^1.0.0"
     web-streams-polyfill "^3.0.3"
 
+fflate@^0.8.2:
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/fflate/-/fflate-0.8.3.tgz#bc27d8eb30343d4d512abb03480202ce65d825fc"
+  integrity sha512-tbZNuJrLwGUp3zshBtdy4W+ORxZuIh8a5ilyIEQDC5rY1f3U20JMry0Ll3WBzU58EZKsEuJFXhb5gwv8CsPvgA==
+
 file-type@^16.5.4:
   version "16.5.4"
   resolved "https://registry.yarnpkg.com/file-type/-/file-type-16.5.4.tgz#474fb4f704bee427681f98dd390058a172a6c2fd"
@@ -2201,10 +2206,10 @@ googleapis@^126.0.1:
     google-auth-library "^9.0.0"
     googleapis-common "^7.0.0"
 
-googlevideo@^4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/googlevideo/-/googlevideo-4.0.4.tgz#a6420cc512179ce3cbe572707258738bcdee97fc"
-  integrity sha512-S/rfuoPBI+qXCEUPJeVhXsHoISMgVhOz8hHSpGWa0OztfHhh+g9EKaEcqAb/+ttO7meoNQNqIy9dfIpz7HPc4g==
+googlevideo@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/googlevideo/-/googlevideo-4.1.1.tgz#dda00494d93fee7ff32f501007b0748a4bc7d0e6"
+  integrity sha512-14o64O+CXXlQ1stYZK/+ypCEwZb25lzEuzhbFYYEzf26R+HhBDOR+Dkdk7MKkZ3qXeIjvZfeC0AJlVKjwQCFjw==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
 
@@ -4716,10 +4721,11 @@ yallist@^4.0.0:
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
 
-youtubei.js@^16.0.1:
-  version "16.0.1"
-  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-16.0.1.tgz#b1fb7d42f36e4d355ba3ca2c93605a0572fe0c9b"
-  integrity sha512-3802bCAGkBc2/G5WUTc0l/bO5mPYJbQAHL04d9hE9PnrDHoBUT8MN721Yqt4RCNncAXdHcfee9VdJy3Fhq1r5g==
+youtubei.js@^17.2.0:
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/youtubei.js/-/youtubei.js-17.2.0.tgz#a9fe7834dcc94f833717d7327be5bf0bf008cf0a"
+  integrity sha512-XLNsgRKO1h7t4i9tIMWSQSeWdD7Ujkk5v1m5YCaumaHMhu/xuLqtO3M0Hq7CXNup9HlJ1NGrT1Y+HLIHnL6Ujg==
   dependencies:
     "@bufbuild/protobuf" "^2.0.0"
+    fflate "^0.8.2"
     meriyah "^6.1.4"
