@@ -468,8 +468,8 @@
       "desc": "Gelen aramaları otomatik olarak reddet"
     },
     "read": {
-      "usage": "Kullanım: read on | off",
-      "desc": "Gelen mesajların otomatik okunmasını etkinleştir veya devre dışı bırak"
+      "usage": "Kullanım: read on | off | p | g | jid,jid | ignore jid,jid\np = sadece kişisel sohbetler, g = sadece gruplar\nBirleştirilebilir: read p 123@g.us (kişisel + o grup)\nread g ignore 123@g.us (o grup hariç tüm gruplar)",
+      "desc": "Gelen mesajları otomatik oku: tümü, sadece kişisel (p), sadece gruplar (g), belirli JID'ler veya yok sayılan JID'ler hariç tümü"
     },
     "online": {
       "usage": "Kullanım: online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Kalan :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ API MODU",
+    "send": "Bir metin mesajı gönder:",
+    "endpoints": "Uç noktalar:",
+    "note": "⚠️ API_PUBLIC_URL ayarlanmadı — medya/webhook indirme bağlantıları çalışmaz. Genel taban URL'nizi ayarlayın.",
+    "locked": "⚠️ API_KEY ayarlanmadı — api kilitli"
   }
 }

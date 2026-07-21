@@ -468,8 +468,8 @@
       "desc": "_Aane wale callon ko khud ba khud rad karne ka nizam banayein_*"
     },
     "read": {
-      "usage": "*Istmaal:* read on | off",
-      "desc": "_Aane wale messages ko khud ba khud parhna chalu ya band karein_"
+      "usage": "*Istmaal:* read on | off | p | g | jid,jid | ignore jid,jid\np = sirf personal chats, g = sirf groups\nMila kar bhi istemal kar sakte hain: read p 123@g.us (personal + wo group)\nread g ignore 123@g.us (us group ke ilawa sab groups)",
+      "desc": "_Aane wale messages khud ba khud parhein: sab, sirf personal (p), sirf groups (g), makhsoos JIDs, ya ignore kiye gaye JIDs ke ilawa sab_"
     },
     "online": {
       "usage": "*Istmaal:* online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Remaining :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ API موڈ — فوری آغاز",
+    "send": "ٹیکسٹ پیغام بھیجیں:",
+    "endpoints": "اینڈ پوائنٹس:",
+    "note": "⚠️ API_PUBLIC_URL سیٹ نہیں ہے — میڈیا/ویب ہک ڈاؤن لوڈ لنکس کام نہیں کریں گے۔ اسے اپنے پبلک بیس URL پر سیٹ کریں۔",
+    "locked": "⚠️ API_KEY سیٹ نہیں ہے — api لاک ہے"
   }
 }

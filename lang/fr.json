@@ -468,8 +468,8 @@
       "desc": "Rejeter automatiquement les appels entrants."
     },
     "read": {
-      "usage": "Utilisation : read on | off",
-      "desc": "Activer ou désactiver la lecture automatique des messages entrants."
+      "usage": "Utilisation : read on | off | p | g | jid,jid | ignore jid,jid\np = discussions privées uniquement, g = groupes uniquement\nCombinable : read p 123@g.us (privées + ce groupe)\nread g ignore 123@g.us (groupes sauf celui-ci)",
+      "desc": "Lecture automatique des messages entrants : tout, privées uniquement (p), groupes uniquement (g), JIDs spécifiques, ou tout sauf les JIDs ignorés."
     },
     "online": {
       "usage": "Utilisation : online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Restant :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ MODE API",
+    "send": "Envoyer un message texte :",
+    "endpoints": "Points de terminaison :",
+    "note": "⚠️ API_PUBLIC_URL non défini — les liens de téléchargement média/webhook ne fonctionneront pas. Définissez-le sur votre URL publique.",
+    "locked": "⚠️ API_KEY NON défini — api verrouillée"
   }
 }

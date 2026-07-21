@@ -481,8 +481,8 @@
       "desc": "Automatically reject incoming calls."
     },
     "read": {
-      "usage": "Usage: read on | off",
-      "desc": "Enable or disable auto-reading of incoming messages."
+      "usage": "Usage: read on | off | p | g | jid,jid | ignore jid,jid\np = personal chats only, g = groups only\nCombinable: read p 123@g.us (personal + that group)\nread g ignore 123@g.us (groups except that one)",
+      "desc": "Auto-read incoming messages: all, personal only (p), groups only (g), specific JIDs, or everything except ignored JIDs."
     },
     "online": {
       "usage": "Usage: online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Remaining :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ API MODE",
+    "send": "Send a text message:",
+    "endpoints": "Endpoints:",
+    "note": "⚠️ API_PUBLIC_URL not set — media/webhook download links won't resolve. Set it to your public base url.",
+    "locked": "⚠️ API_KEY NOT SET — api locked"
   }
 }

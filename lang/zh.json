@@ -481,8 +481,8 @@
       "desc": "自动拒接来电。"
     },
     "read": {
-      "usage": "使用方法：read on | off",
-      "desc": "启用或禁用自动已读消息。"
+      "usage": "使用方法：read on | off | p | g | jid,jid | ignore jid,jid\np = 仅私聊，g = 仅群组\n可组合：read p 123@g.us（私聊 + 该群组）\nread g ignore 123@g.us（除该群外的所有群组）",
+      "desc": "自动已读消息：全部、仅私聊（p）、仅群组（g）、指定 JID，或除忽略的 JID 外的全部。"
     },
     "online": {
       "usage": "使用方法：online on | off",

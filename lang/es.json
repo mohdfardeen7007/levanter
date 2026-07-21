@@ -468,8 +468,8 @@
       "desc": "Bloquea Recibir Llamadas."
     },
     "read": {
-      "usage": "Como Utilizar:read on | off",
-      "desc": "Activar visto por el Bot."
+      "usage": "Como Utilizar:read on | off | p | g | jid,jid | ignore jid,jid\np = solo chats personales, g = solo grupos\nCombinable: read p 123@g.us (personales + ese grupo)\nread g ignore 123@g.us (grupos excepto ese)",
+      "desc": "Visto automático del Bot: todo, solo personales (p), solo grupos (g), JIDs específicos, o todo excepto los JIDs ignorados."
     },
     "online": {
       "usage": "Como Utilizar:online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Restante :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ MODO API",
+    "send": "Enviar un mensaje de texto:",
+    "endpoints": "Endpoints:",
+    "note": "⚠️ API_PUBLIC_URL no está configurada — los enlaces de descarga de medios/webhook no funcionarán. Configúrala con tu URL pública.",
+    "locked": "⚠️ API_KEY NO configurada — api bloqueada"
   }
 }

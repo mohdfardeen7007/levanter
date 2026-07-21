@@ -468,8 +468,8 @@
       "desc": "Calls thaniye cut cheyyaan."
     },
     "read": {
-      "usage": "Usage: read on | off",
-      "desc": "Messages thaniye read cheyyaan."
+      "usage": "Usage: read on | off | p | g | jid,jid | ignore jid,jid\np = personal chats maathram, g = groups maathram\nOnnichu upayogikkam: read p 123@g.us (personal + aa group)\nread g ignore 123@g.us (aa group ozhike ella groups)",
+      "desc": "Messages thaniye read cheyyaan: ellaam, personal maathram (p), groups maathram (g), specific JIDs, allengil ignore cheytha JIDs ozhike ellaam."
     },
     "online": {
       "usage": "Usage: online on | off",
@@ -1088,5 +1088,13 @@
       "remaining": "Baki :",
       "error_prefix": "HEROKU : {0}"
     }
-  }
+  },
+ "api": {
+    "title": "⚡ API Mode",
+    "send": "Oru text message ayakkuka:",
+    "endpoints": "Endpoints:",
+    "note": "⚠️ API_PUBLIC_URL set cheythittilla — media/webhook download links work cheyyilla. Ningalude public base URL set cheyyuka.",
+    "locked": "⚠️ API_KEY set cheythittilla — API lock aanu"
+}
+
 }

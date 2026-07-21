@@ -468,8 +468,8 @@
       "desc": "Aane waale calls ko automatically reject karo."
     },
     "read": {
-      "usage": "Usage: read on | off",
-      "desc": "Aane waale messages ko automatically read karo ya band karo."
+      "usage": "Usage: read on | off | p | g | jid,jid | ignore jid,jid\np = sirf personal chats, g = sirf groups\nSaath me bhi use kar sakte ho: read p 123@g.us (personal + wo group)\nread g ignore 123@g.us (us group ke alawa sab groups)",
+      "desc": "Aane waale messages ko automatically read karo: sab, sirf personal (p), sirf groups (g), specific JIDs, ya ignore kiye JIDs ke alawa sab."
     },
     "online": {
       "usage": "Usage: online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Remaining :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ API मोड",
+    "send": "टेक्स्ट संदेश भेजें:",
+    "endpoints": "एंडपॉइंट्स:",
+    "note": "⚠️ API_PUBLIC_URL सेट नहीं है — मीडिया/वेबहुक डाउनलोड लिंक काम नहीं करेंगे। इसे अपने पब्लिक बेस URL पर सेट करें।",
+    "locked": "⚠️ API_KEY सेट नहीं है — api लॉक है"
   }
 }

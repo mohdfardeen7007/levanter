@@ -1,12 +1,38 @@
-const { bot, setVar, lang } = require('../lib/')
+const { bot, setVar, lang, parsedJid } = require('../lib/')
+
+
+function parseReadValue(match) {
+  const input = match.trim().toLowerCase()
+  if (input === 'on' || input === 'true') return 'true'
+  if (input === 'off' || input === 'false') return 'false'
+  const [includePart, ...ignoreParts] = input.split(/\bignore\b/)
+  const hasIgnore = ignoreParts.length > 0
+  const excludeJids = hasIgnore ? parsedJid(ignoreParts.join(' ')) : []
+  if (hasIgnore && !excludeJids.length) return null
+  const include = []
+  for (const token of includePart.split(/[\s,]+/).filter(Boolean)) {
+    if (token === 'p' || token === 'g') {
+      include.push(token)
+    } else {
+      const jid = parsedJid(token)[0]
+      if (!jid) return null
+      include.push(jid)
+    }
+  }
+  if (!include.length && !hasIgnore) return null
+  const exclude = hasIgnore ? `ignore ${excludeJids.join(',')}` : ''
+  return [include.join(','), exclude].filter(Boolean).join(' ')
+}
 
 async function handleSetting(message, setting, match) {
-  await setVar(
-    {
-      [setting]: match === 'on' ? 'true' : match === 'off' ? 'false' : match,
-    },
-    message.id
-  )
+  if (match === 'on' || match === 'off') {
+    await setVar(
+      {
+        [setting]: match === 'on' ? 'true' : match === 'off' ? 'false' : match,
+      },
+      message.id
+    )
+  }
 }
 
 bot(
@@ -49,7 +75,11 @@ bot(
     if (!match) {
       return await message.send(lang.plugins.read.usage)
     }
-    await handleSetting(message, 'SEND_READ', match)
+    const value = parseReadValue(match)
+    if (value === null) {
+      return await message.send(lang.plugins.read.usage)
+    }
+    await setVar({ SEND_READ: value }, message.id)
     await message.send(lang.plugins.common.update)
   }
 )

@@ -468,8 +468,8 @@
       "desc": "Tolak panggilan masuk secara otomatis."
     },
     "read": {
-      "usage": "Cara Pakai: read on | off",
-      "desc": "Aktifkan atau nonaktifkan pembacaan otomatis pesan masuk."
+      "usage": "Cara Pakai: read on | off | p | g | jid,jid | ignore jid,jid\np = hanya chat pribadi, g = hanya grup\nBisa digabung: read p 123@g.us (pribadi + grup itu)\nread g ignore 123@g.us (semua grup kecuali grup itu)",
+      "desc": "Baca otomatis pesan masuk: semua, hanya pribadi (p), hanya grup (g), JID tertentu, atau semua kecuali JID yang diabaikan."
     },
     "online": {
       "usage": "Cara Pakai: online on | off",
@@ -1088,5 +1088,12 @@
       "remaining": "Sisa :",
       "error_prefix": "HEROKU : {0}"
     }
+  },
+  "api": {
+    "title": "⚡ MODE API",
+    "send": "Kirim pesan teks:",
+    "endpoints": "Endpoint:",
+    "note": "⚠️ API_PUBLIC_URL belum diatur — tautan unduhan media/webhook tidak akan berfungsi. Atur ke URL publik Anda.",
+    "locked": "⚠️ API_KEY belum diatur — api terkunci"
   }
 }
